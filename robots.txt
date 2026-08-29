@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://idea-book-ai-app.pl/sitemap.xml

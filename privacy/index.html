@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy & data · Idea AI Book</title>
+  <meta name="description" content="Current privacy and data-handling notes for the experimental Idea AI Book Android application.">
+  <meta name="theme-color" content="#08070e"><link rel="canonical" href="https://idea-book-ai-app.pl/privacy/">
+  <link rel="icon" href="../assets/idea-book-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css">
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a><div class="shell">
+<header class="header"><a class="brand" href="../"><img src="../assets/idea-book-mark.svg" alt="" width="44" height="44"><span>Idea AI Book</span></a><nav class="nav" aria-label="Main navigation"><a href="../">Home</a><a href="../#workflow">Product</a><a aria-current="page" href="./">Privacy &amp; data</a></nav></header>
+<main id="main" class="page legal"><p class="kicker">Privacy &amp; data</p><h1>Current data boundaries</h1><p class="lead">Idea AI Book is an experimental Android project. This page records the current source-level data architecture without pretending that unresolved runtime or provider state is already proven.</p>
+<div class="meta"><div><strong>Effective</strong><br>29 August 2026</div><div><strong>Platform</strong><br>Android</div><div><strong>Status</strong><br>Experimental</div></div>
+<section><h2>Local idea storage</h2><p>The Android project uses Room / SQLite as its primary persistence layer for ideas and related local state. Core idea-management workflows are therefore local-first.</p></section>
+<section><h2>Gemini-assisted generation</h2><p>The app source includes direct integration with Google&apos;s Generative Language API / Gemini. When an AI-assisted workflow is used, content required for that request may leave the device and be processed by Google under the applicable Google service terms. Source integration alone does not prove that every request succeeds or which provider-side logs or retention apply to a particular runtime session.</p></section>
+<section><h2>Firebase integrations</h2><p>Firebase Analytics, Crashlytics and Performance are integrated in the project source. Their presence in source does not by itself prove that a particular event, crash or performance trace was delivered to or retained by Firebase. Provider delivery and runtime behavior are treated as separate evidence.</p></section>
+<section><h2>Android backup and deletion</h2><p>Local app data can be affected by in-app actions, clearing app data and uninstalling. Android backup, restore and data-extraction behavior is still an active project review area, so this site does not claim that every local record is removed or restored in every device scenario.</p></section>
+<section><h2>This website</h2><p>This website itself uses no analytics scripts, advertising code, external web fonts or third-party JavaScript. It is published through GitHub Pages; GitHub may process ordinary web-request information as part of hosting the site under GitHub&apos;s own terms.</p></section>
+<section><h2>Changes</h2><p>Because the app is under active development, these notes may be updated when source architecture, provider integrations, permissions or tested runtime behavior change.</p></section>
+</main><footer class="footer"><div><strong>Idea AI Book</strong><br>Android idea workspace.</div><div><a href="../">Home</a> · <a href="./">Privacy &amp; data</a><br>© 2026 Idea AI Book</div></footer></div></body></html>

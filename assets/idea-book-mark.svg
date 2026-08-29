@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Idea AI Book</title>
+  <rect width="64" height="64" rx="18" fill="#4d327d"/>
+  <path d="M15 20.5c7.2-2.7 12.6-1.9 17 2.2v25.1c-4.4-4-9.8-4.8-17-2.1V20.5Z" fill="#b49aff"/>
+  <path d="M49 20.5c-7.2-2.7-12.6-1.9-17 2.2v25.1c4.4-4 9.8-4.8 17-2.1V20.5Z" fill="#d1c0ff"/>
+  <path d="M37.5 26.5h7M37.5 31h7M37.5 35.5h7" stroke="#4d327d" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
