@@ -67,12 +67,89 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="screens-title">
-      <div class="section-heading"><p class="kicker">Current UI reference</p><h2 id="screens-title">A dark workspace that stays out of the way.</h2><p class="lead">Deep black surfaces, restrained violet accents and dense but readable information keep the focus on the idea itself.</p></div>
-      <div class="gallery">
-        <article class="shot visual-card"><div class="visual-title">Library</div><div class="visual-search">Search text, tags or trigger…</div><div class="ui-chips"><span class="on">All</span><span>Favorites</span><span>In development</span></div><div class="ui-tags"><span>#Hardware</span><span>#Metacognition</span></div><h3>Library &amp; filters</h3><p>Folders, tags, favorites, states and full-text search in one place.</p></article>
-        <article class="shot visual-card"><div class="visual-title">Review & reflection</div><div class="review-box"><b>Long without attention (0)</b><span>No ideas here. Nice work.</span></div><div class="review-box"><b>No next step (5)</b><span>Bring unresolved ideas back into view.</span></div><h3>Review &amp; reflection</h3><p>Surface ideas that have gone quiet or still lack a next action.</p></article>
-        <article class="shot visual-card"><div class="visual-title">Create with Gemini AI</div><div class="generated"><b>Generated draft (editable)</b><label>Idea title</label><span>Digital Time Capsule</span><label>Main idea / description</label><span>Write a letter to your future self and revisit it on a chosen date.</span></div><h3>Editable AI draft</h3><p>Generate, review, change and only then save the result into the idea library.</p></article>
+    <section class="section" id="gallery" aria-labelledby="screens-title">
+      <div class="section-heading">
+        <p class="kicker">Current Android · 18 September 2026</p>
+        <h2 id="screens-title">See the product, not a mock-up.</h2>
+        <p class="lead">Fresh physical-device captures show the current Library and Search / Explore surfaces as they actually run on Android.</p>
+      </div>
+
+      <div class="screen-gallery" aria-label="Current Idea AI Book Android screenshots">
+        <figure class="media-card runtime-card">
+          <div class="media-frame">
+            <img src="assets/gallery/runtime-library-home.jpg" alt="Idea AI Book Library Home on Android with Search Explore, Quick capture, Gemini AI and recent ideas" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge runtime">Current runtime</span>
+            <h3>Library Home</h3>
+            <p>Resume recent work, jump into Search / Explore, capture quickly and open Gemini from one focused home surface.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card runtime-card runtime-offset">
+          <div class="media-frame">
+            <img src="assets/gallery/runtime-search-explore.jpg" alt="Idea AI Book Search Explore screen on Android with an Android query, advanced filters and five results" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge runtime">Current runtime</span>
+            <h3>Search / Explore</h3>
+            <p>Advanced filters, sorting, export and dense result cards remain usable on compact-width Android.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card runtime-card">
+          <div class="media-frame">
+            <img src="assets/gallery/runtime-search-empty.jpg" alt="Idea AI Book Search Explore zero-results empty state on Android" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge runtime">Current runtime</span>
+            <h3>Clear empty states</h3>
+            <p>Discovery stays explicit when nothing matches, so the user can recover without losing the surrounding context.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section concept-section" aria-labelledby="redesign-title">
+      <div class="section-heading">
+        <p class="kicker">Redesign explorations</p>
+        <h2 id="redesign-title">Where the experience can go next.</h2>
+        <p class="lead">These frames are proposed design explorations, shown as visual direction rather than claims about the current runtime.</p>
+      </div>
+
+      <div class="concept-gallery" aria-label="Proposed Idea AI Book redesign explorations">
+        <figure class="media-card concept-card">
+          <div class="media-frame concept-frame">
+            <img src="assets/gallery/redesign-knowledge-map.png" alt="Proposed Idea AI Book Knowledge Map redesign showing connected idea clusters around Firebase" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge concept">Concept · proposed</span>
+            <h3>Knowledge Map</h3>
+            <p>A graph-led way to move through related ideas, domains and connections instead of treating notes as isolated cards.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card concept-card concept-offset">
+          <div class="media-frame concept-frame">
+            <img src="assets/gallery/redesign-android-space.png" alt="Proposed Idea AI Book Android Space redesign with ideas, plan, map, tags and related collections" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge concept">Concept · proposed</span>
+            <h3>Spaces</h3>
+            <p>A richer thematic workspace that can bring ideas, plans, tags and related collections into one coherent place.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card concept-card">
+          <div class="media-frame concept-frame">
+            <img src="assets/gallery/redesign-search-explore.png" alt="Proposed Idea AI Book Search Explore redesign with ideas, tags and relationship discovery" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <span class="media-badge concept">Concept · proposed</span>
+            <h3>Discovery, expanded</h3>
+            <p>A future-facing exploration of search where ideas, tags and relationships can become one connected discovery surface.</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -81,7 +158,7 @@
       <div class="boundary-card"><ul class="boundary-list"><li><strong>Idea library</strong><span>Primary persistence uses a local Room / SQLite database on the Android device.</span></li><li><strong>Gemini AI</strong><span>The Android client includes direct Google Generative Language API integration for AI-assisted workflows.</span></li><li><strong>Firebase</strong><span>Analytics, Crashlytics and Performance integrations are present in source; runtime/provider delivery is validated separately.</span></li></ul><p><a href="privacy/">Read the current privacy &amp; data notes →</a></p></div>
     </section>
 
-    <section class="section" id="status"><div class="status"><p class="kicker">Project status</p><h2>Experimental and actively evolving.</h2><p>Idea AI Book is under active development. The screenshots used as the visual reference for this site were captured from the Android app on <strong>29 August 2026</strong>. Features, wording and data behavior may change as the project is tested and refined.</p></div></section>
+    <section class="section" id="status"><div class="status"><p class="kicker">Project status</p><h2>Experimental and actively evolving.</h2><p>Idea AI Book is under active development. The live Android captures shown above were recorded on <strong>18 September 2026</strong>. Redesign explorations are labelled separately and may not match the current runtime exactly. Features, wording and data behavior may continue to evolve.</p></div></section>
   </main>
 
   <footer class="footer"><div><strong>Idea AI Book</strong><br>Android idea workspace.</div><div><a href="privacy/">Privacy &amp; data</a> · <a href="support/">Support</a><br>© 2026 Idea AI Book</div></footer>

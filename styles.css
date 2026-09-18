@@ -26,3 +26,124 @@ a{color:var(--primary);text-underline-offset:.18em}.skip-link{position:fixed;lef
 @media(max-width:900px){.header{align-items:flex-start;flex-direction:column}.nav{width:100%;flex-wrap:nowrap;overflow:auto}.hero{grid-template-columns:1fr;min-height:auto;padding-top:54px}.hero-copy{max-width:none}.hero-visual{min-height:590px;order:-1}.workflow{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery{grid-template-columns:1fr 1fr}.shot:nth-child(2){margin-top:0}.gallery .shot:last-child{grid-column:1/-1;max-width:520px}.boundary{grid-template-columns:1fr}}
 @media(max-width:560px){.shell{width:min(calc(100% - 22px),var(--max))}.header{border-radius:20px;margin-top:10px}.nav{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible}.nav a{text-align:center;padding:9px 8px;font-size:.9rem}.hero{padding:36px 0 48px}.hero h1{font-size:clamp(2.75rem,15vw,4.1rem)}.hero-visual{min-height:470px}.phone.primary{width:235px;transform:translate(44px,-4px) rotate(2.5deg)}.phone.secondary{width:190px;transform:translate(-74px,65px) rotate(-7deg)}.orb{width:280px;height:280px}.section{padding:48px 0}.workflow{grid-template-columns:1fr}.step{min-height:0;padding:18px 4px}.step::before{margin-bottom:16px}.gallery{grid-template-columns:1fr}.gallery .shot:last-child{grid-column:auto}.shot{padding:12px;border-radius:22px}.boundary-card,.status{padding:22px;border-radius:22px}.meta{grid-template-columns:1fr}.footer{flex-direction:column;font-size:.92rem}.page{margin:44px auto}.phone-ui{padding:15px 12px}.ui-copy{font-size:.58rem}.idea-card p{font-size:.58rem}.visual-card{min-height:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* 2026-09-18 current app + redesign gallery */
+.screen-gallery,.concept-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(18px,2.4vw,28px);
+  align-items:start;
+}
+.media-card{
+  margin:0;
+  position:relative;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:32px;
+  background:
+    linear-gradient(155deg,rgba(165,138,255,.08),transparent 28%),
+    linear-gradient(180deg,#17131f,#0d0a13);
+  box-shadow:0 24px 80px rgba(0,0,0,.3);
+  overflow:hidden;
+}
+.media-card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  pointer-events:none;
+  border-radius:inherit;
+  background:radial-gradient(circle at 50% 0,rgba(165,138,255,.16),transparent 34%);
+  opacity:.8;
+}
+.media-frame{
+  position:relative;
+  z-index:1;
+  padding:8px;
+  border:1px solid rgba(165,138,255,.18);
+  border-radius:25px;
+  background:#07060c;
+  overflow:hidden;
+}
+.media-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:19px;
+}
+.media-card figcaption{
+  position:relative;
+  z-index:1;
+  padding:17px 8px 8px;
+}
+.media-card h3{
+  margin:10px 0 5px;
+  font-size:1.16rem;
+  letter-spacing:-.02em;
+}
+.media-card p{
+  margin:0;
+  font-size:.95rem;
+  color:var(--muted);
+}
+.media-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:5px 9px;
+  border-radius:9px;
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.media-badge.runtime{
+  color:#b8ffdf;
+  background:rgba(33,199,144,.12);
+  border:1px solid rgba(33,199,144,.3);
+}
+.media-badge.concept{
+  color:#d8c8ff;
+  background:rgba(165,138,255,.12);
+  border:1px solid rgba(165,138,255,.28);
+}
+.runtime-offset,.concept-offset{margin-top:54px}
+.concept-section{
+  position:relative;
+}
+.concept-section::before{
+  content:"";
+  position:absolute;
+  width:48vw;
+  height:48vw;
+  max-width:720px;
+  max-height:720px;
+  left:50%;
+  top:8%;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(126,91,212,.16),transparent 68%);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.concept-frame{
+  border-color:rgba(165,138,255,.26);
+}
+@media(max-width:900px){
+  .screen-gallery,.concept-gallery{grid-template-columns:1fr 1fr}
+  .screen-gallery .media-card:last-child,.concept-gallery .media-card:last-child{
+    grid-column:1/-1;
+    max-width:520px;
+    justify-self:center;
+  }
+  .runtime-offset,.concept-offset{margin-top:0}
+}
+@media(max-width:560px){
+  .screen-gallery,.concept-gallery{grid-template-columns:1fr}
+  .screen-gallery .media-card:last-child,.concept-gallery .media-card:last-child{
+    grid-column:auto;
+    max-width:none;
+  }
+  .media-card{border-radius:24px;padding:9px}
+  .media-frame{border-radius:19px;padding:6px}
+  .media-frame img{border-radius:14px}
+}
